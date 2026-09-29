@@ -105,25 +105,50 @@ const obj1={
   Name:"Vaishnav",
   Age:19
 }
-const ytvideo={
+const ytvideo=[
+  {
+  id:"dddxw",
   Name:"Gold Rush Video Song",
   Channel:"Sony Musi South",
   Views:"582K",
   Upload_date:"1 day ago"
+},
+{
+  id:"dddx54e",
+  Name:"Illey illa video song",
+  Channel:"Jiohotstar",
+  Views:"1M",
+  Upload_date:"10 day ago"
 }
+
+
+
+]
+
   return (
-    <div>
+
+
+    <div >
+        <Card data={ytvideo}/>
+
+<div>
+  {
+    ytvideo.map((data)=>{
+      return(
+        <p key={data.id}>{data.Name}</p>
+      )
+    })
+  }
+</div>
+
+      </div> 
       
-      <p className='text =8xl font-bold text-green-400'>Project</p>
-      <p className='text =8xl'>NAME:{obj1.Name}</p>
-      <p className='text =8xl'>AGE:{obj1.Age}</p>
 
 
 
 
       
-    <Card data={ytvideo}/>
-    </div>
+    
 
   )
 }
